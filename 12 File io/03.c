@@ -1,6 +1,6 @@
 /*
     Question:
-    Write a C program that copies the content of "kgcoding.txt" into "copy.txt".
+    Write a C program that copies the content of "fileio.txt" into "copy.txt".
 */
 
 #include <stdio.h>
@@ -9,7 +9,7 @@ int main() {
     printf("Welcome to File Copying\n");
 
     // Opening the source file for reading
-    FILE *source_file = fopen("kgcoding.txt", "r");
+    FILE *source_file = fopen("fileio.txt", "r");
     if (source_file == NULL) {
         printf("Error: Could not open 'kgcoding.txt' for reading.\n");
         return 1;
@@ -29,7 +29,7 @@ int main() {
         fputc(c, dest_file);
     }
 
-    printf("File copied successfully from 'kgcoding.txt' to 'copy.txt'.\n");
+    printf("File copied successfully from 'fileio.txt' to 'copy.txt'.\n");
 
     // Closing files
     fclose(source_file);

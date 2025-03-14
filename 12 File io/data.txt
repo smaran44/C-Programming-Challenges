@@ -1,0 +1,6 @@
+File input/output operations are essential for handling data in C programming.
+They allow programs to read from and write to files, enabling data persistence and manipulation.
+
+
+
+This message was written by the program

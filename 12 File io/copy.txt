@@ -1,0 +1,56 @@
+File Input/Output (I/O) in C Programming
+
+File input/output operations are essential for handling data in C programming. They allow programs to read from and write to files, enabling data persistence and manipulation. Here are some common file I/O operations in C:
+
+1. Opening a File:
+    - `fopen()`: Opens a file and returns a file pointer.
+      ```c
+      FILE *file = fopen("filename.txt", "r"); // "r" for read mode
+      ```
+
+2. Reading from a File:
+    - `fgetc()`: Reads a character from a file.
+      ```c
+      char ch = fgetc(file);
+      ```
+    - `fgets()`: Reads a string from a file.
+      ```c
+      char str[100];
+      fgets(str, 100, file);
+      ```
+    - `fscanf()`: Reads formatted input from a file.
+      ```c
+      int num;
+      fscanf(file, "%d", &num);
+      ```
+
+3. Writing to a File:
+    - `fputc()`: Writes a character to a file.
+      ```c
+      fputc('A', file);
+      ```
+    - `fputs()`: Writes a string to a file.
+      ```c
+      fputs("Hello, World!", file);
+      ```
+    - `fprintf()`: Writes formatted output to a file.
+      ```c
+      fprintf(file, "Number: %d", num);
+      ```
+
+4. Closing a File:
+    - `fclose()`: Closes an opened file.
+      ```c
+      fclose(file);
+      ```
+
+5. Error Handling:
+    - Always check if the file was opened successfully.
+      ```c
+      if (file == NULL) {
+            perror("Error opening file");
+            return 1;
+      }
+      ```
+
+By mastering these file I/O operations, you can effectively manage data in your C programs.
