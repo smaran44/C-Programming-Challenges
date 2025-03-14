@@ -6,7 +6,7 @@ This program reads a file and counts the number of characters (including spaces 
 */
 
 #include <stdio.h>
-#include <stdlib.h>
+
 
 int main() {
     FILE *file = fopen("input.txt", "r");  // Open the file in read mode

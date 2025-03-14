@@ -7,24 +7,13 @@ and prints all lines containing the word.
 */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 #define MAXLINE 1000  // Maximum line length
-#define PATTERN "xyz" // Word to search for
+#define PATTERN "it" // Word to search for
 
-// Function to fetch a line from the file
-int fetchline(FILE *file, char line[], int max_size) {
-    if (fgets(line, max_size, file) != NULL) {
-        return strlen(line);
-    }
-    return 0;
-}
-
-// Function to check if a word is in a line
-int getindex(char line[], char word[]) {
-    return (strstr(line, word) != NULL) ? 1 : -1;
-}
+int fetchline(FILE *file, char line[], int max_size);
+int getindex(char line[], char word[]);
 
 int main() {
     FILE *file = fopen("input.txt", "r");  // Open the file in read mode
@@ -50,3 +39,18 @@ int main() {
     fclose(file);  // Close the file
     return 0;
 }
+
+// Function to fetch a line from the file
+int fetchline(FILE *file, char line[], int max_size) {
+    if (fgets(line, max_size, file) != NULL) {
+        return strlen(line);
+    }
+    return 0;
+}
+//Each time fgets() is called, it overwrites the previous content in line with the new line from the file.
+
+// Function to check if a word is in a line
+int getindex(char line[], char word[]) {
+    return (strstr(line, word) != NULL) ? 1 : -1;//strstr() function is used to find the first occurrence of a word in a string.
+}
+

@@ -6,7 +6,6 @@ This program reads a file and prints its content to the console.
 */
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
     FILE *file = fopen("input.txt", "r");  // Open the file in read mode
