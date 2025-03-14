@@ -1,0 +1,9 @@
+C is a powerful, general-purpose programming language that serves as the foundation for many modern programming languages. Developed by Dennis Ritchie in 1972 at Bell Labs, C was designed to create system software, particularly the UNIX operating system. Over the years, it has gained immense popularity due to its efficiency, portability, and control over hardware.
+
+Features of C
+Simple and Efficient – C has a minimalistic syntax, making it easy to write and understand.
+Fast Execution – Since C is a compiled language and works close to the hardware, it is extremely fast.
+Portability – C code can run on multiple platforms with minimal modifications.
+Rich Library Support – The C Standard Library provides a wide range of built-in functions for efficient programming.
+Memory Management – C allows direct memory access through pointers, enabling efficient memory usage.
+Structured Programming – C follows a modular approach, helping in better code organization.
