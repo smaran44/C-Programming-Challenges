@@ -23,6 +23,8 @@ void input_book(Book *book) {
     printf("\nPlease enter the book title: ");
     fgets(book->title, 100, stdin);
     book->title[strcspn(book->title, "\n")] = 0; // Remove trailing newline
+    //strcspn is used to find the length of the string until the first occurrence of '\n'
+    // and then we replace it with '\0' to remove the newline character
 
     printf("Now, enter the book's author: ");
     fgets(book->author, 100, stdin);
