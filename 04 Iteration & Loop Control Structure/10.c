@@ -1,38 +1,39 @@
 // Program to check whether a given number is an Armstrong number
-#include <stdio.h> // Include standard input-output library
+
+#include <stdio.h>
+#include <math.h>  // Needed for pow() function
 
 int main() {
-    // Declare a variable to store user input
-    int num;
+    int num, originalNum, remainder, n = 0;
+    float result = 0.0;
 
-    // Display a welcome message
-    printf("Welcome to Armstrong Number Checker\n");
+    printf("Enter an integer: ");
+    scanf("%d", &num);
 
-    // Ask the user to enter a number
-    printf("Please enter the number: ");
-    scanf("%d", &num); // Read user input and store it in 'num'
+    originalNum = num;
 
-    // Variable to store the sum of the cubes of the digits
-    int sum = 0;
-
-    // Create a copy of 'num' so that the original value remains unchanged
-    int copy = num;
-
-    // Loop to extract digits and calculate the sum of their cubes
-    while (copy > 0) {
-        int digit = copy % 10; // Extract the last digit
-        sum += digit * digit * digit; // Add the cube of the digit to 'sum'
-        copy /= 10; // Remove the last digit from 'copy'
+    // Count the number of digits
+    while (originalNum != 0) {
+        originalNum /= 10;
+        ++n;
     }
 
-    // Check if the sum of cubes of digits is equal to the original number
-    if (sum == num) {
-        printf("The number %d is an Armstrong number.", num);
-    } else {
-        printf("The number %d is not an Armstrong number.", num);
+    originalNum = num;
+
+    // Calculate the sum of the nth powers of its digits
+    while (originalNum != 0) {
+        remainder = originalNum % 10;
+        result += pow(remainder, n);
+        originalNum /= 10;
     }
 
-    return 0; // End of the program
+    // Check if the number is an Armstrong number
+    if ((int)result == num)
+        printf("%d is an Armstrong number.\n", num);
+    else
+        printf("%d is not an Armstrong number.\n", num);
+
+    return 0;
 }
 /*An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits.
 
